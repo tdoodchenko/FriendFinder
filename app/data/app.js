@@ -33,7 +33,7 @@ var friends = [
     },
     {
       name: "Meg",
-      photo: "https://github.com/tdoodchenko/FriendFinder/blob/master/app/assets/images/Meg.jpg?raw=true",
+      photo: "https://github.com/tdoodchenko/FriendFinder/blob/master/app/assets/images/meg2.jpg?raw=true",
       scores: [
         "1",
         "1",
