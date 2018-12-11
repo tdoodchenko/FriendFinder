@@ -5,7 +5,7 @@ var bodyParser = require("body-parser");
 var app = express();
 
 // set port process.env for deploying to heroku
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 // bodyParser helps our server to understand data sent to it
 app.use(bodyParser.json());

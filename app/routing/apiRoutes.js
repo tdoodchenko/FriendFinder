@@ -5,40 +5,46 @@ module.exports = function(app) {
         res.json(friends);
     });
 
-    app.post("/api/friends", function(req, res) {
+    
 
-        var match = {
-            name: "",
-            photo: "",
-            startDif: 1000
-        };
-
-        // grab the result of the user"s survey POST and parse
-        var uD = req.body;
-        var uS = uD.scores;
-
-        // difference between user and database user's score 
-        var difference = 0;
-
-        // loop all friends in database
-        for (var i = 0; i < friends.length; i++) {
-            difference = 0;
-            // loop all scores of each friend
-            for (var k = 0; k < friends[i].scores[k]; k++) {
-                // difference between scores and sum it
-                difference += Math.abs(parseInt(uS[k]) - parseInt(friends[i].scores[k]));
-                if (difference <= match.startDif) {
-                // reset match 
-                match.name = friends[i].name;
-                match.photo = friends[i].photo;
-                match.startDif = difference;
-                }
+        app.post('/api/friends', function (req, res) {
+            var newFriend = req.body;
+      
+            var bestMatch = {};
+      
+            for(var i = 0; i < newFriend.scores.length; i++) {
+              if(newFriend.scores[i] == "1 (Strongly Disagree)") {
+                newFriend.scores[i] = 1;
+              } else if(newFriend.scores[i] == "5 (Strongly Agree)") {
+                newFriend.scores[i] = 5;
+              } else {
+                newFriend.scores[i] = parseInt(newFriend.scores[i]);
+              }
             }
-        }
-    // save user's data to the database
-    friends.push(uD);
-    // return JSON
-    res.json(match);
-    });
-};
-
+      
+            var bestMatchIndex = 0;
+            var bestMatchDifference = 40;
+      
+            for(var i = 0; i < friends.length; i++) {
+              var totalDifference = 0;
+      
+              for(var index = 0; index < friends[i].scores.length; index++) {
+                var differenceOneScore = Math.abs(friends[i].scores[index] - newFriend.scores[index]);
+                totalDifference += differenceOneScore;
+              }
+      
+              if (totalDifference < bestMatchDifference) {
+                bestMatchIndex = i;
+                bestMatchDifference = totalDifference;
+              }
+            }
+      
+            bestMatch = friends[bestMatchIndex];
+      
+            friends.push(newFriend);
+      
+            res.json(bestMatch);
+        });
+      
+      };
+       
