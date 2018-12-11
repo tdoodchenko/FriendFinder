@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FriendFinder</title>
+   
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.jquery.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container text-center">
+        <h2>Survey questions</h2>
+        <h4>Name (Required)</h4>
+            <input type="text" id="name" class="form-control" required>
+        <h4>Link to photo (Required)</h4>
+            <input type="text" id="photo" class="form-control" required>
+
+        <h3>Question 1</h3>
+            <h4>You like web development.</h4>
+            <select class="chosen-select" id="q1">
+                <option value=""></option>
+                <option value="1">1 (Strongly disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Somewhat agree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        <h3>Question 2</h3>
+            <h4>You like frontend and hate backend.</h4>
+            <select class="chosen-select" id="q2">
+                <option value=""></option>
+                <option value="1">1 (Strongly disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Somewhat agree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        <h3>Question 3</h3>
+            <h4>CLI applications are really boring.</h4>
+            <select class="chosen-select" id="q3">
+                <option value=""></option>
+                <option value="1">1 (Strongly disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Somewhat agree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        <h3>Question 4</h3>
+            <h4>You are proficient in HTML/CSS/Javascript.</h4>
+            <select class="chosen-select" id="q4">
+                <option value=""></option>
+                <option value="1">1 (Strongly disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Somewhat agree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        <h3>Question 5</h3>
+            <h4>You read medium.com every day.</h4>
+            <select class="chosen-select" id="q5">
+                <option value=""></option>
+                <option value="1">1 (Strongly disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Somewhat agree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        <h3>Question 6</h3>
+            <h4>Firebase is very useful.</h4>
+            <select class="chosen-select" id="q6">
+                <option value=""></option>
+                <option value="1">1 (Strongly disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Somewhat agree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        <h3>Question 7</h3>
+            <h4>You like to teach future web developers.</h4>
+            <select class="chosen-select" id="q7">
+                <option value=""></option>
+                <option value="1">1 (Strongly disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Somewhat agree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        <h3>Question 8</h3>
+            <h4> Angular is the most difficult part of frontend web development.</h4>
+            <select class="chosen-select" id="q8">
+                <option value=""></option>
+                <option value="1">1 (Strongly disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Somewhat agree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        <h3>Question 9</h3>
+            <h4>FriendFinder homework is simple.</h4>
+            <select class="chosen-select" id="q9">
+                <option value=""></option>
+                <option value="1">1 (Strongly disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Somewhat agree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        <h3>Question 10</h3>
+            <h4>You don’t like surveys and quizzes.</h4>
+            <select class="chosen-select" id="q10">
+                <option value=""></option>
+                <option value="1">1 (Strongly disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Somewhat agree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            
+
+
+        <br>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg" id="submit"><i class="fa fa-check-square-o" aria-hidden="true"></i>   Submit</button>
+        <a href="/"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-home"></span>   Go home</button></a>
+        <br>
+        <footer class="footer">
+            <div class="container text-right">
+                <p><a href="/api/friends">API Friends List</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- &times; stands for × in html -->
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title">Best friend</h2>
+                </div>
+                <div class="modal-body text-center">
+                    <h2 id="match-name"></h2>
+                    <img id="match-img" src="" alt="photo">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+var config = {
+    ".chosen-select": {},
+    ".chosen-select-deselect": {
+        allow_single_deselect: true
+    },
+    ".chosen-select-no-single": {
+        disable_search_threshold: 10
+    },
+    ".chosen-select-no-results": {
+        no_results_text: "Error."
+    },
+    ".chosen-select-width": {
+        width: "80%"
+    }
+};
+    for (var selector in config) {
+        $(selector).chosen(config[selector]);
+    }
+$("#submit").on("click", function(event) {
+    event.preventDefault();
+    function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function() {
+            if ($(this).val() === "") {
+                isValid = false;
+            }
+        });
+        $(".chosen-select").each(function() {
+            if ($(this).val() === "") {
+                isValid = false;
+            }
+        });
+        return isValid;
+    }
+    if (validateForm()) {
+        var uD = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+                $("#q1").val(),
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val()
+            ]
+        };
+        // AJAX postfriends API.
+        $.post("/api/friends", uD, function(data) {
+            $("#match-name").text(data.name);
+            $("#match-img").attr("src", data.photo);
+            $("#results-modal").modal("toggle");
+        });
+    } else {
+      alert("Please fill out all fields.");
+    }
+});
+</script>
+
+</body>
+
+</html>
+
